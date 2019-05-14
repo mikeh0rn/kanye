@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdC-Rf-AO8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kanye Quote Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdC-Rf-AO8">
                                 <rect key="frame" x="20" y="281" width="374" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="3CB-p0-37Y"/>
@@ -36,14 +36,26 @@
                                     <action selector="changeKanyeQuoteWithSender:" destination="tWk-KC-aFG" eventType="touchUpInside" id="fqN-mL-qPD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv2-WP-io2">
+                                <rect key="frame" x="20" y="518" width="374" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="SHARE"/>
+                                <connections>
+                                    <action selector="shareWithFriendsWithSender:" destination="tWk-KC-aFG" eventType="touchUpInside" id="W0J-cW-WBz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Vv2-WP-io2" firstAttribute="top" secondItem="xIz-Tx-kPV" secondAttribute="bottom" constant="16" id="0qW-Ub-tlA"/>
                             <constraint firstItem="xIz-Tx-kPV" firstAttribute="leading" secondItem="buE-rf-ekm" secondAttribute="leading" constant="20" id="173-H7-tBG"/>
+                            <constraint firstItem="Vv2-WP-io2" firstAttribute="leading" secondItem="buE-rf-ekm" secondAttribute="leading" constant="20" id="6Zz-hy-vfb"/>
                             <constraint firstItem="gdC-Rf-AO8" firstAttribute="leading" secondItem="zdZ-jp-7IN" secondAttribute="leadingMargin" id="NE4-cr-15b"/>
                             <constraint firstItem="buE-rf-ekm" firstAttribute="trailing" secondItem="xIz-Tx-kPV" secondAttribute="trailing" constant="20" id="azR-Z9-I3c"/>
                             <constraint firstItem="gdC-Rf-AO8" firstAttribute="top" secondItem="buE-rf-ekm" secondAttribute="top" constant="261" id="cqe-TC-CpZ"/>
                             <constraint firstItem="xIz-Tx-kPV" firstAttribute="top" secondItem="gdC-Rf-AO8" secondAttribute="bottom" constant="77" id="nTu-8r-Q5x"/>
+                            <constraint firstItem="buE-rf-ekm" firstAttribute="trailing" secondItem="Vv2-WP-io2" secondAttribute="trailing" constant="20" id="oyP-i6-8JD"/>
                             <constraint firstItem="gdC-Rf-AO8" firstAttribute="trailing" secondItem="zdZ-jp-7IN" secondAttribute="trailingMargin" id="rnn-MD-uI8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="buE-rf-ekm"/>
@@ -54,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3N6-ZH-0Ud" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="125"/>
+            <point key="canvasLocation" x="140.57971014492756" y="124.72826086956523"/>
         </scene>
     </scenes>
 </document>

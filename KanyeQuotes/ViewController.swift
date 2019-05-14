@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Branch
 
 
 class ViewController: UIViewController {
@@ -19,8 +20,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         loadUpKanyeQuote()
-        
-        // Do any additional setup after loading the view.
     }
     
     
@@ -45,8 +44,27 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    func showShareSheet() {
+        let buo = BranchUniversalObject.init(canonicalIdentifier: "kanyequote/\(NSUUID().uuidString)")
+        buo.title = "My Favorite Kanye Quote"
+        buo.contentDescription = "My Content Description"
+        buo.imageUrl = "https://timedotcom.files.wordpress.com/2000/04/kanye-west-time-100-2015-titans.jpg?quality=85"
+        let lp: BranchLinkProperties = BranchLinkProperties()
+        lp.channel = "sms"
+        lp.feature = "sharing"
+        let message = "Peep this crazy thing Kanye said"
+        buo.showShareSheet(with: lp, andShareText: message, from: self) { (activityType, completed) in
+            print(activityType ?? "")
+        }
+    }
+    
     @IBAction func changeKanyeQuote(sender: UIButton) {
         loadUpKanyeQuote()
+    }
+    
+    @IBAction func shareWithFriends(sender: UIButton) {
+        showShareSheet()
     }
     
 }
