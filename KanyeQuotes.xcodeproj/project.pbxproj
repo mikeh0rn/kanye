@@ -12,6 +12,8 @@
 		8C55B2D5228B62050092A49A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C55B2D3228B62050092A49A /* Main.storyboard */; };
 		8C55B2D7228B62070092A49A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C55B2D6228B62070092A49A /* Assets.xcassets */; };
 		8C55B2DA228B62070092A49A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C55B2D8228B62070092A49A /* LaunchScreen.storyboard */; };
+		8C55B2E2228B64CD0092A49A /* KanyeQuotes.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 8C55B2E1228B649E0092A49A /* KanyeQuotes.entitlements */; };
+		CAC015D2E24AB6B875D07A57 /* Pods_KanyeQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966D733E2A7432FBA3684EAF /* Pods_KanyeQuotes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		8C55B2D6228B62070092A49A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C55B2D9228B62070092A49A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C55B2DB228B62070092A49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C55B2E1228B649E0092A49A /* KanyeQuotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KanyeQuotes.entitlements; sourceTree = "<group>"; };
+		966D733E2A7432FBA3684EAF /* Pods_KanyeQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KanyeQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B03D88D751765554661EACAD /* Pods-KanyeQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanyeQuotes.release.xcconfig"; path = "Target Support Files/Pods-KanyeQuotes/Pods-KanyeQuotes.release.xcconfig"; sourceTree = "<group>"; };
+		FA4C787A1CDA1586C0016F36 /* Pods-KanyeQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanyeQuotes.debug.xcconfig"; path = "Target Support Files/Pods-KanyeQuotes/Pods-KanyeQuotes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC015D2E24AB6B875D07A57 /* Pods_KanyeQuotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0905F784EE30D37652A49C20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				966D733E2A7432FBA3684EAF /* Pods_KanyeQuotes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B5348F2A27BE68C161BEAA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C787A1CDA1586C0016F36 /* Pods-KanyeQuotes.debug.xcconfig */,
+				B03D88D751765554661EACAD /* Pods-KanyeQuotes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8C55B2C3228B62050092A49A = {
 			isa = PBXGroup;
 			children = (
 				8C55B2CE228B62050092A49A /* KanyeQuotes */,
 				8C55B2CD228B62050092A49A /* Products */,
+				0B5348F2A27BE68C161BEAA0 /* Pods */,
+				0905F784EE30D37652A49C20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +80,7 @@
 		8C55B2CE228B62050092A49A /* KanyeQuotes */ = {
 			isa = PBXGroup;
 			children = (
+				8C55B2E1228B649E0092A49A /* KanyeQuotes.entitlements */,
 				8C55B2CF228B62050092A49A /* AppDelegate.swift */,
 				8C55B2D1228B62050092A49A /* ViewController.swift */,
 				8C55B2D3228B62050092A49A /* Main.storyboard */,
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C55B2DE228B62070092A49A /* Build configuration list for PBXNativeTarget "KanyeQuotes" */;
 			buildPhases = (
+				BDDB5C5F03F5CBB71D914444 /* [CP] Check Pods Manifest.lock */,
 				8C55B2C8228B62050092A49A /* Sources */,
 				8C55B2C9228B62050092A49A /* Frameworks */,
 				8C55B2CA228B62050092A49A /* Resources */,
+				181C15AB22D85908A9BE9388 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +125,11 @@
 				TargetAttributes = {
 					8C55B2CB228B62050092A49A = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C55B2E2228B64CD0092A49A /* KanyeQuotes.entitlements in Resources */,
 				8C55B2DA228B62070092A49A /* LaunchScreen.storyboard in Resources */,
 				8C55B2D7228B62070092A49A /* Assets.xcassets in Resources */,
 				8C55B2D5228B62050092A49A /* Main.storyboard in Resources */,
@@ -129,6 +164,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		181C15AB22D85908A9BE9388 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KanyeQuotes/Pods-KanyeQuotes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Branch/Branch.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Branch.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KanyeQuotes/Pods-KanyeQuotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDDB5C5F03F5CBB71D914444 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KanyeQuotes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C55B2C8228B62050092A49A /* Sources */ = {
@@ -280,8 +362,10 @@
 		};
 		8C55B2DF228B62070092A49A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA4C787A1CDA1586C0016F36 /* Pods-KanyeQuotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KanyeQuotes/KanyeQuotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V8RHQ7L5JP;
 				INFOPLIST_FILE = KanyeQuotes/Info.plist;
@@ -298,8 +382,10 @@
 		};
 		8C55B2E0228B62070092A49A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B03D88D751765554661EACAD /* Pods-KanyeQuotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KanyeQuotes/KanyeQuotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V8RHQ7L5JP;
 				INFOPLIST_FILE = KanyeQuotes/Info.plist;

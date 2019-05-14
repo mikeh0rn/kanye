@@ -1,24 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tWk-KC-aFG">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="V7t-lq-9AI">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="tWk-KC-aFG" customClass="ViewController" customModule="KanyeQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zdZ-jp-7IN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdC-Rf-AO8">
+                                <rect key="frame" x="20" y="281" width="374" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="3CB-p0-37Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIz-Tx-kPV">
+                                <rect key="frame" x="20" y="472" width="374" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="CHANGE QUOTE"/>
+                                <connections>
+                                    <action selector="changeKanyeQuoteWithSender:" destination="tWk-KC-aFG" eventType="touchUpInside" id="fqN-mL-qPD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="xIz-Tx-kPV" firstAttribute="leading" secondItem="buE-rf-ekm" secondAttribute="leading" constant="20" id="173-H7-tBG"/>
+                            <constraint firstItem="gdC-Rf-AO8" firstAttribute="leading" secondItem="zdZ-jp-7IN" secondAttribute="leadingMargin" id="NE4-cr-15b"/>
+                            <constraint firstItem="buE-rf-ekm" firstAttribute="trailing" secondItem="xIz-Tx-kPV" secondAttribute="trailing" constant="20" id="azR-Z9-I3c"/>
+                            <constraint firstItem="gdC-Rf-AO8" firstAttribute="top" secondItem="buE-rf-ekm" secondAttribute="top" constant="261" id="cqe-TC-CpZ"/>
+                            <constraint firstItem="xIz-Tx-kPV" firstAttribute="top" secondItem="gdC-Rf-AO8" secondAttribute="bottom" constant="77" id="nTu-8r-Q5x"/>
+                            <constraint firstItem="gdC-Rf-AO8" firstAttribute="trailing" secondItem="zdZ-jp-7IN" secondAttribute="trailingMargin" id="rnn-MD-uI8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="buE-rf-ekm"/>
                     </view>
+                    <connections>
+                        <outlet property="kanyeQuoteLabel" destination="gdC-Rf-AO8" id="OsD-2S-TnC"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3N6-ZH-0Ud" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="142" y="125"/>
         </scene>
     </scenes>
 </document>
