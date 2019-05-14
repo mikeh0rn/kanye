@@ -22,6 +22,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Branch.getInstance().initSession(launchOptions: launchOptions) { (params, error) in
             // do stuff with deep link data (nav to page, display content, etc)
             print(params as? [String: AnyObject] ?? {})
+            
+            let clickedBranchLink = (params?["+clicked_branch_link"] as! Bool)
+            
+            if clickedBranchLink {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil);
+                let quoteViewController: QuoteViewController = storyboard.instantiateViewController(withIdentifier: "QuoteViewController") as! QuoteViewController;
+                let quote = params?["quote"] as! String?
+                if let unwrappedQuote = quote {
+                    print("the unwrapped quote is:", unwrappedQuote)
+                    quoteViewController.quote = unwrappedQuote
+                }
+                
+                let rootViewController = self.window!.rootViewController as! UINavigationController;
+                rootViewController.pushViewController(quoteViewController, animated: true);
+            }
+            
         }
         return true
     }
