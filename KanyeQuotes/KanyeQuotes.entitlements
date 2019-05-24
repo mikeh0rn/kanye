@@ -6,6 +6,7 @@
 	<array>
 		<string>applinks:kanye.app.link</string>
 		<string>applinks:kanye-alternate.app.link</string>
+		<string>applinks:lt.abmarketing01.com</string>
 	</array>
 </dict>
 </plist>
