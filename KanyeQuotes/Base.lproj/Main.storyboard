@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="VCR_OSD_MONO_1.001.ttf">
+            <string>VCROSDMono</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="V7t-lq-9AI">
@@ -18,27 +23,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kanye Quote Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdC-Rf-AO8">
-                                <rect key="frame" x="20" y="325" width="374" height="114"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KANYE QUOTE LOADING..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdC-Rf-AO8">
+                                <rect key="frame" x="20" y="214" width="374" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114" id="3CB-p0-37Y"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIz-Tx-kPV">
-                                <rect key="frame" x="20" y="516" width="374" height="30"/>
+                                <rect key="frame" x="60" y="405" width="294" height="35"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="c2k-rf-6C9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="CHANGE QUOTE"/>
+                                <state key="normal" title="REFRESH"/>
                                 <connections>
                                     <action selector="changeKanyeQuoteWithSender:" destination="tWk-KC-aFG" eventType="touchUpInside" id="fqN-mL-qPD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv2-WP-io2">
-                                <rect key="frame" x="20" y="562" width="374" height="30"/>
+                                <rect key="frame" x="60" y="456" width="294" height="35"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3BI-le-657"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="14"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="SHARE"/>
                                 <connections>
@@ -49,20 +62,22 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Vv2-WP-io2" firstAttribute="top" secondItem="xIz-Tx-kPV" secondAttribute="bottom" constant="16" id="0qW-Ub-tlA"/>
-                            <constraint firstItem="xIz-Tx-kPV" firstAttribute="leading" secondItem="buE-rf-ekm" secondAttribute="leading" constant="20" id="173-H7-tBG"/>
-                            <constraint firstItem="Vv2-WP-io2" firstAttribute="leading" secondItem="buE-rf-ekm" secondAttribute="leading" constant="20" id="6Zz-hy-vfb"/>
+                            <constraint firstItem="xIz-Tx-kPV" firstAttribute="leading" secondItem="buE-rf-ekm" secondAttribute="leading" constant="60" id="173-H7-tBG"/>
+                            <constraint firstItem="Vv2-WP-io2" firstAttribute="leading" secondItem="buE-rf-ekm" secondAttribute="leading" constant="60" id="6Zz-hy-vfb"/>
                             <constraint firstItem="gdC-Rf-AO8" firstAttribute="leading" secondItem="zdZ-jp-7IN" secondAttribute="leadingMargin" id="NE4-cr-15b"/>
-                            <constraint firstItem="buE-rf-ekm" firstAttribute="trailing" secondItem="xIz-Tx-kPV" secondAttribute="trailing" constant="20" id="azR-Z9-I3c"/>
-                            <constraint firstItem="gdC-Rf-AO8" firstAttribute="top" secondItem="buE-rf-ekm" secondAttribute="top" constant="261" id="cqe-TC-CpZ"/>
+                            <constraint firstItem="buE-rf-ekm" firstAttribute="trailing" secondItem="xIz-Tx-kPV" secondAttribute="trailing" constant="60" id="azR-Z9-I3c"/>
+                            <constraint firstItem="gdC-Rf-AO8" firstAttribute="top" secondItem="buE-rf-ekm" secondAttribute="top" constant="150" id="cqe-TC-CpZ"/>
                             <constraint firstItem="xIz-Tx-kPV" firstAttribute="top" secondItem="gdC-Rf-AO8" secondAttribute="bottom" constant="77" id="nTu-8r-Q5x"/>
-                            <constraint firstItem="buE-rf-ekm" firstAttribute="trailing" secondItem="Vv2-WP-io2" secondAttribute="trailing" constant="20" id="oyP-i6-8JD"/>
+                            <constraint firstItem="buE-rf-ekm" firstAttribute="trailing" secondItem="Vv2-WP-io2" secondAttribute="trailing" constant="60" id="oyP-i6-8JD"/>
                             <constraint firstItem="gdC-Rf-AO8" firstAttribute="trailing" secondItem="zdZ-jp-7IN" secondAttribute="trailingMargin" id="rnn-MD-uI8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="buE-rf-ekm"/>
                     </view>
                     <navigationItem key="navigationItem" id="hWL-7F-UQ6"/>
                     <connections>
+                        <outlet property="changeQuoteButton" destination="xIz-Tx-kPV" id="UkU-1G-2bE"/>
                         <outlet property="kanyeQuoteLabel" destination="gdC-Rf-AO8" id="OsD-2S-TnC"/>
+                        <outlet property="shareButton" destination="Vv2-WP-io2" id="6w8-dn-xdH"/>
                         <segue destination="Ip8-TO-aEb" kind="show" id="tB9-Ux-OZL"/>
                     </connections>
                 </viewController>
@@ -70,27 +85,27 @@
             </objects>
             <point key="canvasLocation" x="1088" y="125"/>
         </scene>
-        <!--QuoteViewController-->
+        <!--Ima let you finish but...-->
         <scene sceneID="R5R-Oz-O4G">
             <objects>
-                <viewController storyboardIdentifier="QuoteViewController" title="QuoteViewController" id="Ip8-TO-aEb" customClass="QuoteViewController" customModule="KanyeQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuoteViewController" title="Ima let you finish but..." id="Ip8-TO-aEb" customClass="QuoteViewController" customModule="KanyeQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ues-Pc-AmJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kanye Quote Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slT-bC-c7H">
-                                <rect key="frame" x="20" y="307" width="374" height="123"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KANYE QUOTE LOADING..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slT-bC-c7H">
+                                <rect key="frame" x="20" y="214" width="374" height="123"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="123" id="sOn-hF-L8N"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="slT-bC-c7H" firstAttribute="top" secondItem="gzg-Ei-KWI" secondAttribute="top" constant="243" id="FQj-xM-API"/>
+                            <constraint firstItem="slT-bC-c7H" firstAttribute="top" secondItem="gzg-Ei-KWI" secondAttribute="top" constant="150" id="FQj-xM-API"/>
                             <constraint firstItem="slT-bC-c7H" firstAttribute="leading" secondItem="gzg-Ei-KWI" secondAttribute="leading" constant="20" id="JNf-NO-JKe"/>
                             <constraint firstItem="slT-bC-c7H" firstAttribute="leading" secondItem="gzg-Ei-KWI" secondAttribute="leading" constant="20" id="TF4-VB-Itc"/>
                             <constraint firstItem="gzg-Ei-KWI" firstAttribute="trailing" secondItem="slT-bC-c7H" secondAttribute="trailing" constant="20" id="gSa-sh-j5i"/>
