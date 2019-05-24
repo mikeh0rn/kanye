@@ -23,14 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // do stuff with deep link data (nav to page, display content, etc)
             print(params as? [String: AnyObject] ?? {})
             
-            let clickedBranchLink = (params?["+clicked_branch_link"] as! Bool)
+            let clickedBranchLink = (params?["+clicked_branch_link"] as? Bool)
             
-            if clickedBranchLink {
+            if clickedBranchLink ?? false {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil);
                 let quoteViewController: QuoteViewController = storyboard.instantiateViewController(withIdentifier: "QuoteViewController") as! QuoteViewController;
                 let quote = params?["quote"] as! String?
                 if let unwrappedQuote = quote {
-                    print("the unwrapped quote is:", unwrappedQuote)
                     quoteViewController.quote = unwrappedQuote
                 }
                 

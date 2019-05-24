@@ -19,8 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var kanyeQuoteLabel: UILabel!
     @IBOutlet weak var changeQuoteButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewWillAppear(_ animated: Bool) {
+        shareButton.isEnabled = false
         changeQuoteButton.backgroundColor = UIColor(hexString: "#F2F2F2")
         changeQuoteButton.setTitleColor(UIColor(hexString: "#ABABAB"), for: .normal)
         shareButton.backgroundColor = UIColor(hexString: "#F2F2F2")
@@ -28,7 +30,7 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.activityIndicator.startAnimating()
         loadUpKanyeQuote()
     }
     
@@ -42,6 +44,7 @@ class ViewController: UIViewController {
     }
     
     func loadUpKanyeQuote() {
+        
         let url = "https://api.kanye.rest"
         Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
@@ -49,7 +52,12 @@ class ViewController: UIViewController {
                     guard let json = try? JSON(data: data) else { return }
                     self.kanyeQuote = json["quote"].stringValue
                     self.kanyeQuoteLabel.text = self.kanyeQuote.uppercased()
+                    self.shareButton.isEnabled = true
+                    
+                }else{
+                    self.activityIndicator.stopAnimating()
                 }
+                
         }
     }
     
