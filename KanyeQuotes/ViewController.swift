@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         let lp: BranchLinkProperties = BranchLinkProperties()
         lp.channel = "sms"
         lp.feature = "sharing"
-        let message = "Kanye said WHAT?!?!"
+        let message = "Peep this Quote:"
         buo.showShareSheet(with: lp, andShareText: message, from: self) { (activityType, completed) in
             print(activityType ?? "")
         }
